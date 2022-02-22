@@ -107,3 +107,7 @@ Then, from within your project folder:
 npm run build
 surge public my-project.surge.sh
 ```
+
+## Attribution
+
+"[Eco, environment, green, leaves, nature, recycle icon](https://www.iconfinder.com/icons/1936907/eco_environment_green_leaves_nature_recycle_recycling_icon)" by [PixelBuddha](https://www.iconfinder.com/PixelBuddha), used under [Creative Commons (Attribution 3.0 Unported)](https://creativecommons.org/licenses/by/3.0/)

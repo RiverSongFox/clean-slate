@@ -1,4 +1,6 @@
 <script>
+  import Ribbon from './Ribbon.svelte'
+
   const API = "https://api.github.com";
 
   let token = "";
@@ -54,6 +56,8 @@
 <header>
   <h1>Clean Slate</h1>
   <p>Delete unwanted GitHub repositories. Fast.</p>
+
+  <Ribbon />
 </header>
 
 <main>

@@ -1,7 +1,9 @@
 <script>
-  import Ribbon from './Ribbon.svelte'
+  import pluralize from "pluralize";
+  import Ribbon from "./Ribbon.svelte";
 
   const API = "https://api.github.com";
+  const p = pluralize;
 
   let token = "";
   let repositories = [];
@@ -123,6 +125,38 @@
               disabled={repository.permissions.admin === false}
             />
             {repository.full_name}
+
+            {#if repository.template}
+              <sup>template</sup>
+            {/if}
+
+            {#if repository.private}
+              <sup>private</sup>
+            {/if}
+
+            {#if repository.archived}
+              <sup>archived</sup>
+            {/if}
+
+            {#if repository.fork}
+              <sup>fork</sup>
+            {/if}
+
+            {#if repository.open_issues_count}
+              <sup>{p("issue", repository.open_issues_count, true)}</sup>
+            {/if}
+
+            {#if repository.forks_count}
+              <sup>{p("fork", repository.forks_count, true)}</sup>
+            {/if}
+
+            {#if repository.stargazers_count}
+              <sup>{p("star", repository.stargazers_count, true)}</sup>
+            {/if}
+
+            {#if repository.watchers_count}
+              <sup>{p("watcher", repository.watchers_count, true)}</sup>
+            {/if}
           </label>
         </li>
       {/each}
@@ -140,3 +174,10 @@
     </label>
   </section>
 </main>
+
+<style>
+  sup {
+    text-decoration: underline;
+    text-decoration-style: dashed;
+  }
+</style>

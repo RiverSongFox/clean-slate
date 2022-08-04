@@ -70,7 +70,7 @@
         Generate a new <strong>Personal Access Token</strong> in your
         <a
           ref="noopener noreferrer"
-          href="https://github.com/settings/tokens"
+          href="https://github.com/settings/tokens/new?scopes=repo,delete_repo"
           target="_blank"
         >
           GitHub Developer Settings
